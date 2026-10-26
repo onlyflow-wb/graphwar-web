@@ -61,3 +61,4 @@ If your Supabase project uses a custom domain, add it to `connect-src` in the Co
 See `PROGRESS.md` for exactly what was tested and what was not. Short version: all logic is tested automatically
 (including against a real Redis and a real Postgres for the RLS rules), but **nothing has been run against a live Supabase, Upstash or
 Vercel account yet** — do the checklist in `PROGRESS.md` ("First live deploy") before relying on online play.
+"# graphwar-web" 
