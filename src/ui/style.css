@@ -1,0 +1,38 @@
+:root { color-scheme: light; }
+html, body { margin: 0; height: 100%; background: #9ed79b; overflow: hidden; overscroll-behavior: none; }
+body { font-family: "DejaVu Sans", Verdana, "Liberation Sans", sans-serif; -webkit-tap-highlight-color: transparent; touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+#viewport { position: fixed; inset: 0; }
+#stage { position: absolute; width: 800px; height: 600px; transform-origin: 0 0; background: rgb(158,215,155); overflow: hidden; }
+.screen { position: absolute; inset: 0; background: rgb(158,215,155); }
+.screen[hidden] { display: none; }
+.abs { position: absolute; }
+.img { position: absolute; pointer-events: none; -webkit-user-drag: none; }
+.btn { position: absolute; cursor: pointer; -webkit-user-drag: none; user-select: none; }
+.btn.disabled { cursor: default; }
+.mirror { transform: scaleX(-1); }
+input.field { position: absolute; box-sizing: border-box; height: 25px; padding: 2px 4px; font: 14px "DejaVu Sans", Verdana, sans-serif; border: 1px solid #6b6b6b; background: #fff; color: #000; user-select: text; -webkit-user-select: text; outline: none; border-radius: 0; }
+input.field:focus { border-color: #ffae00; box-shadow: 0 0 0 1px #ffae00; }
+input.field:disabled { background: #e8e8e8; }
+.chatbox { position: absolute; box-sizing: border-box; overflow-y: scroll; overflow-x: hidden; background: #fff; border: 1px solid #6b6b6b; font: 13px "DejaVu Sans", Verdana, sans-serif; padding: 2px 4px; user-select: text; -webkit-user-select: text; white-space: pre-wrap; word-break: break-word; }
+.chatbox .sys { color: rgb(160,160,160); font-style: italic; }
+.chatbox .who { font-weight: bold; }
+.label { position: absolute; font: bold 20px "DejaVu Sans", Verdana, sans-serif; color: orange; text-align: center; display: flex; align-items: center; justify-content: center; text-shadow: 0 0 2px #000; }
+.catcher { position: absolute; inset: 0; background: rgba(0,0,0,0.0); }
+.row { position: absolute; box-sizing: border-box; border: 1px solid #000; height: 15px; font: 14px "DejaVu Sans", Verdana, sans-serif; line-height: 13px; overflow: hidden; white-space: nowrap; }
+.row .nm { position: absolute; left: 1px; top: 0; overflow: hidden; text-overflow: clip; }
+.rooms { position: absolute; background: #fff; border: 1px solid #000; overflow-y: auto; box-sizing: border-box; font: bold 14px "DejaVu Sans", Verdana, sans-serif; }
+.rooms .r { display: flex; height: 20px; border: 1px solid #000; border-top: 0; align-items: center; cursor: pointer; box-sizing: border-box; padding: 0 2px; }
+.rooms .r:hover { background: rgba(255,174,0,0.3); }
+.rooms .r span:first-child { flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.rooms .r span.n { width: 70px; } .rooms .r span.m { width: 40px; }
+.plist { position: absolute; background: #fff; border: 1px solid #000; overflow-y: auto; box-sizing: border-box; font: 14px "DejaVu Sans", Verdana, sans-serif; padding: 2px 4px; }
+canvas.plane { position: absolute; left: 15px; top: 15px; width: 770px; height: 450px; }
+canvas.angle { position: absolute; left: 10px; top: 475px; width: 200px; height: 113px; pointer-events: none; }
+.timer { position: absolute; left: 221px; top: 564px; width: 57px; height: 22px; background: #fff; font: bold 18px "DejaVu Sans", Verdana, sans-serif; line-height: 22px; padding-left: 4px; box-sizing: border-box; color: #000; pointer-events: none; }
+.timer.low { color: red; }
+.toast { position: absolute; left: 0; right: 0; top: 8px; text-align: center; font: bold 14px "DejaVu Sans", sans-serif; color: #fff; text-shadow: 0 0 3px #000; pointer-events: none; z-index: 50; }
+#touchbar { position: fixed; left: 0; right: 0; bottom: 0; height: 44px; background: #5f8f5d; display: flex; gap: 4px; padding: 4px; box-sizing: border-box; overflow-x: auto; align-items: center; z-index: 10; }
+#touchbar[hidden] { display: none; }
+#touchbar button { flex: 0 0 auto; min-width: 38px; height: 36px; font: bold 16px "DejaVu Sans", sans-serif; border-radius: 6px; border: 1px solid #234; background: #fff; color: #111; padding: 0 8px; touch-action: manipulation; }
+#touchbar button.ang { background: #ffae00; }
+#touchbar .sep { flex: 0 0 8px; }

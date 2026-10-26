@@ -1,0 +1,6 @@
+# Minimal local-dev config for the Supabase CLI. The hosted project needs the same switch turned on:
+# Dashboard -> Authentication -> Sign In / Providers -> "Allow anonymous sign-ins".
+project_id = "graphwar-web"
+
+[auth]
+enable_anonymous_sign_ins = true

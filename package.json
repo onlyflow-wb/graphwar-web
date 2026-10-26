@@ -1,0 +1,31 @@
+{
+  "name": "graphwar-web",
+  "version": "1.0.0",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "description": "Web port of Graphwar (GPLv3) - artillery game with math functions",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "bench": "tsx scripts/bench.ts",
+    "test:db": "sh supabase/tests/run.sh"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "@upstash/redis": "^1.39.0",
+    "jose": "^5.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@vercel/node": "^27.0.1",
+    "playwright-core": "^1.64.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  }
+}
